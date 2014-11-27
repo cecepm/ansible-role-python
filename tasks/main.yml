@@ -1,0 +1,10 @@
+- name: ensure python packages is installed
+  apt: name={{ item }} state=installed
+  with_items:
+  - python
+  - python-dev
+  - python-pip
+  - python-setuptools
+  - python-virtualenv
+  - virtualenvwrapper
+  sudo: yes
